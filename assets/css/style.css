@@ -1,0 +1,126 @@
+:root{
+    --paper: #F7F6F2;
+    --blue-light: #C9DCE6;
+    --blue-mid: #A9C3D1;
+    --blue-deep: #6E8A98;
+    --graphite: #4A4A4A;
+    --text-soft: #6E8A98;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    background-image: url("assets/img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contenido-centro {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/* ===== TÍTULO ===== */
+.titulo-principal {
+    font-family: "Emilys Candy", serif;
+    margin-bottom: 40px;
+    margin-top: -40px;   
+    text-align: center;
+    color: var(--graphite);
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+/* ===== TARJETAS ===== */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background: var(--paper);
+    width: 400px;      
+    height: 320px;
+    padding: 25px;
+    border-radius: 50px;
+    border: 2px solid var(--blue-light);
+    box-shadow: 0 4px 12px rgba(110, 138, 152, 0.25);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(110, 138, 152, 0.35);
+}
+
+.tarjeta-titulo {
+    text-align: center;
+    font-size: 22px;
+    color: var(--graphite);
+    border-bottom: 1px solid var(--blue-light);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-texto {
+    color: var(--text-soft);
+    margin-bottom: 25px;
+    font-size: 13px;
+    flex-grow: 1; 
+    font-family: "Delius Swash Caps", cursive;      
+}
+
+/* ===== BOTÓN ===== */
+.boton-tarjeta {
+    text-decoration: none;
+    background: var(--blue-mid);
+    color: var(--graphite);
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(110, 138, 152, 0.3);
+
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.boton-tarjeta:hover {
+    background: var(--blue-deep);
+    color: white;
+    box-shadow: 0 5px 12px rgba(110, 138, 152, 0.4);
+}
+
+/* ===== FOOTER ===== */
+.pie-pagina {
+    padding: 20px;
+    text-align: center;
+    color: var(--graphite);
+    font-family: "Emilys Candy", serif;
+    font-size: 1.1rem;
+}
